@@ -2,11 +2,11 @@
 // import './App.css'
 import MainRouter from '@package/router/MainRouter';
 import { BrowserRouter } from 'react-router-dom';
-import { Header } from '@package/component';
-import { Footer } from '@package/component';
+import { Header,Footer, PageTransitionProvider } from '@package/component';
 import '@package/asset/css/basic.scss'
 import '@package/asset/css/common.scss'
 import '@package/asset/css/style.scss'
+import '@package/asset/css/wave.scss'
 import {
   QueryClient,
   QueryClientProvider,
@@ -24,9 +24,11 @@ function App() {
     <>
       <QueryClientProvider client={queryClient}>
         <BrowserRouter basename="/portfolio">
-          <Header/>
-          <MainRouter/>
-          <Footer/>
+          <PageTransitionProvider>
+            <Header/>
+            <MainRouter/>
+            <Footer/>
+          </PageTransitionProvider>
         </BrowserRouter>
       </QueryClientProvider>
     </>

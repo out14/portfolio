@@ -1,0 +1,392 @@
+.beer-transition {
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+    pointer-events: none;
+
+
+    // ==========================================
+    // 맥주 액체
+    // ==========================================
+
+    &__liquid {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        width: 100%;
+        height: 100%;
+
+        // 맥주 색
+        background: linear-gradient(
+            to bottom,
+            #f3b52b 0%,
+            #e89a0c 35%,
+            #c87800 100%
+        );
+
+        transform: translateY(100%);
+
+        //overflow: hidden;
+        overflow: visible; 
+    }
+
+
+    // ==========================================
+    // SVG 파도 공통
+    // ==========================================
+
+    &__wave {
+        position: absolute;
+        left: 0;
+        bottom: calc(100% - 80px);
+
+        width: 100%;
+        height: 160px;
+
+        display: block;
+
+        overflow: visible;
+
+        // SVG가 찌그러지는 느낌 방지
+        transform-origin: center bottom;
+
+        path {
+            stroke: none;
+        }
+        &--back {
+            z-index: 1;
+    
+            height: 240px;
+            opacity: .7;
+    
+            path {
+                fill: #d98900;
+            }
+    
+            animation:
+                waveBack
+                3.5s
+                ease-in-out
+                infinite;
+        }
+    
+        &--main {
+            z-index: 2;
+    
+            height: 210px;
+    
+            path {
+                fill: #f3b52b;
+            }
+    
+            animation:
+                waveMain
+                2.8s
+                ease-in-out
+                infinite;
+        }
+
+        // --------------------------------------
+        // 뒤쪽 파도
+        // --------------------------------------
+
+        &--back {
+            z-index: 1;
+
+            height: 240px;
+
+            opacity: .7;
+
+            transform:
+                translateX(-3%)
+                scaleX(1.08);
+
+            animation:
+                waveBack
+                3.5s
+                ease-in-out
+                infinite;
+        }
+
+
+        // --------------------------------------
+        // 메인 파도
+        // --------------------------------------
+
+        &--main {
+            z-index: 2;
+
+            height: 210px;
+
+            transform:
+                translateX(0)
+                scaleX(1.05);
+
+            animation:
+                waveMain
+                2.8s
+                ease-in-out
+                infinite;
+        }
+    }
+
+
+    // ==========================================
+    // 기포
+    // ==========================================
+
+    &__bubbles {
+        position: absolute;
+        z-index: 3;
+
+        inset: 0;
+
+        overflow: hidden;
+
+        pointer-events: none;
+
+
+        i {
+            position: absolute;
+            left: 0;
+            bottom: -20px;
+
+            display: block;
+
+            width: 6px;
+            height: 6px;
+
+            border: 1px solid rgba(
+                255,
+                244,
+                214,
+                .6
+            );
+
+            border-radius: 50%;
+
+            opacity: 0;
+
+            // 기본 기포 애니메이션
+            animation:
+                bubbleUp
+                3s
+                ease-in
+                infinite;
+
+
+            // ----------------------------------
+            // 기포 자동 생성
+            // ----------------------------------
+
+            @for $i from 1 through 30 {
+
+                &:nth-child(#{$i}) {
+
+                    // 화면 전체에 골고루 배치
+                    left: percentage(
+                        ($i - 1) / 30
+                    );
+
+                    // 크기
+                    width: #{3 + random(7)}px;
+                    height: #{3 + random(7)}px;
+
+                    // 속도
+                    animation-duration:
+                        #{2.5 + random(15) / 10}s;
+
+                    // 시작 위치 시간
+                    animation-delay:
+                        #{random(30) / -10}s;
+                }
+            }
+        }
+    }
+
+
+    // ==========================================
+    // 전환 시작
+    // ==========================================
+
+    &.is-active {
+
+        .beer-transition__liquid {
+            animation:
+                liquidUp
+                //.9s
+                1.5s
+                cubic-bezier(.77, 0, .18, 1)
+                forwards;
+        }
+    }
+
+
+    // ==========================================
+    // 페이지 이동 후 내려가기
+    // ==========================================
+
+    &.is-hide {
+
+        .beer-transition__liquid {
+            animation:
+                liquidDown
+                //.9s
+                1.5s
+                cubic-bezier(.77, 0, .18, 1)
+                forwards;
+        }
+    }
+}
+
+
+
+// =================================================
+// 뒤쪽 파도
+// =================================================
+
+@keyframes waveBack {
+
+    0% {
+        transform:
+            translateX(-5%)
+            scaleX(1.1)
+            rotate(-1.5deg);
+    }
+
+    50% {
+        transform:
+            translateX(5%)
+            scaleX(1.18)
+            rotate(1.5deg);
+    }
+
+    100% {
+        transform:
+            translateX(-5%)
+            scaleX(1.1)
+            rotate(-1.5deg);
+    }
+}
+
+
+
+// =================================================
+// 메인 파도
+// =================================================
+
+@keyframes waveMain {
+
+    0% {
+        transform:
+            translateX(-4%)
+            scaleX(1.08)
+            rotate(1deg);
+    }
+
+    50% {
+        transform:
+            translateX(4%)
+            scaleX(1.15)
+            rotate(-1deg);
+    }
+
+    100% {
+        transform:
+            translateX(-4%)
+            scaleX(1.08)
+            rotate(1deg);
+    }
+}
+
+
+
+// =================================================
+// 기포
+// =================================================
+
+@keyframes bubbleUp {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translate3d(0, 0, 0)
+            scale(.35);
+    }
+
+
+    10% {
+        opacity: .7;
+    }
+
+
+    35% {
+        transform:
+            translate3d(-8px, -25vh, 0)
+            scale(.8);
+    }
+
+
+    60% {
+        opacity: .8;
+
+        transform:
+            translate3d(10px, -55vh, 0)
+            scale(1);
+    }
+
+
+    85% {
+        opacity: .4;
+    }
+
+
+    100% {
+        opacity: 0;
+
+        transform:
+            translate3d(-12px, -105vh, 0)
+            scale(1.15);
+    }
+}
+
+
+
+// =================================================
+// 액체 올라오기
+// =================================================
+
+@keyframes liquidUp {
+
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+// =================================================
+// 액체 내려가기
+// =================================================
+
+@keyframes liquidDown {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}

@@ -1,4 +1,5 @@
-import { NavLink } from "react-router-dom"
+import { TransitionNavLink } from "./transNavLink"
+
 
 export const Header =()=>{
 
@@ -6,18 +7,18 @@ export const Header =()=>{
         <div>
             <div className="header">
                 <div className="header_cnt">
-                    <NavLink to="/"  className="header_logo">
+                    <TransitionNavLink to="/"  className="header_logo">
                         <img src={`${import.meta.env.BASE_URL}image/logo.png`} alt="로고"/>
-                    </NavLink>
+                    </TransitionNavLink>
                     <ul className="header_ul">
                         <li id="index">
-                            <NavLink to="/" className={({ isActive }) => isActive ? "on" : ""}>Main</NavLink>
+                            <TransitionNavLink to="/" >Main</TransitionNavLink>
                         </li>
                         <li id="about">
-                            <NavLink to="/about" className={({ isActive }) => isActive ? "on" : ""}>about</NavLink>
+                            <TransitionNavLink to="/about" >about</TransitionNavLink>
                         </li>
                         <li id="portfolio">
-                            <NavLink to="/portfolio" className={({ isActive }) => isActive ? "on" : ""}>Portfolio</NavLink>
+                            <TransitionNavLink to="/portfolio">Portfolio</TransitionNavLink>
                         </li>
                         {/* <li id="contact"><a href="">Contact us</a></li> */}
                     </ul>

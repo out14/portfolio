@@ -1,3 +1,5 @@
 export * from './footer'
 export * from './header'
 export * from './card'
+export * from './wave'
+export * from './transLink'
