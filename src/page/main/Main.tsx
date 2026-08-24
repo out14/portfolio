@@ -1,13 +1,14 @@
 //import React from 'react';
 import {useListData } from '@/package/hook'
-import { Swiper, SwiperSlide} from "swiper/react";
+import { Swiper, SwiperSlide } from 'swiper/react'
+import type { Swiper as SwiperType } from 'swiper'
 import { Navigation } from 'swiper/modules'
 import "swiper/css";
 import "swiper/css/pagination";
 import 'swiper/css/navigation'
 import { Card } from '@/package/component';
 import { Link } from 'react-router-dom';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 
 export const Main = () => {
@@ -19,8 +20,9 @@ export const Main = () => {
         // isLoading,
         // error 
     } = useListData()
-    const prevRef = useRef<HTMLButtonElement>(null)
-    const nextRef = useRef<HTMLButtonElement>(null)
+    const [isBeginning, setIsBeginning] = useState(true)
+    const [isEnd, setIsEnd] = useState(false)
+    const swiperRef = useRef<SwiperType | null>(null)
 
     return (
         <div>
@@ -112,18 +114,18 @@ export const Main = () => {
                         </div>
                         
                         <Swiper
+                            onSwiper={(swiper) => {
+                                swiperRef.current = swiper
+                                setIsBeginning(swiper.isBeginning)
+                                setIsEnd(swiper.isEnd)
+                            }}
+                            onSlideChange={(swiper) => {
+                                setIsBeginning(swiper.isBeginning)
+                                setIsEnd(swiper.isEnd)
+                            }}
                             spaceBetween={20}
                             slidesPerView={1}
                             modules={[Navigation]}
-                            onBeforeInit={(swiper) => {
-                                if (
-                                    typeof swiper.params.navigation !== 'boolean' &&
-                                    swiper.params.navigation
-                                ) {
-                                    swiper.params.navigation.prevEl = prevRef.current
-                                    swiper.params.navigation.nextEl = nextRef.current
-                                }
-                            }}
                             breakpoints= {{
                                     480: {
                                         slidesPerView: 2,
@@ -143,11 +145,19 @@ export const Main = () => {
                                     </SwiperSlide>
                                 ))
                             }
-                            <button className='portfolio_prev' ref={prevRef}>
+                            <button 
+                                className='portfolio_prev' 
+                                disabled={isBeginning}
+                                onClick={() => swiperRef.current?.slidePrev()}
+                            >
                                 <span></span>
                                 <span></span>
                             </button>
-                            <button className='portfolio_next'  ref={nextRef}>
+                            <button 
+                                className='portfolio_next'  
+                                disabled={isEnd}
+                                onClick={() => swiperRef.current?.slideNext()}
+                                >
                                 <span></span>
                                 <span></span>
                             </button>
