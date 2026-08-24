@@ -1,15 +1,16 @@
 import { Link } from 'react-router-dom';
 import type { portType } from '@/package/type';
+import { TransitionNavLink } from './transNavLink';
 
 export const Card = ({element}:{element:portType}) => {
     return (
-        <Link 
+        <TransitionNavLink 
             to={
                 element.link===""
-                ?`/page/portfolioView.html?nickname=${element.nickname}`
+                ?`/portfolioView/${element.nickname}`
                 :element.link
             }
-            target="_blank"
+            
         >
             <div className="portfolio_image">
                 {/* <img src={element.thumbnail} alt={element.title}/> */}
@@ -38,7 +39,7 @@ export const Card = ({element}:{element:portType}) => {
                     </p>
                 </div>
             </div>
-        </Link>
+        </TransitionNavLink>
     );
 };
 

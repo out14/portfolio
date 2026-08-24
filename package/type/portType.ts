@@ -7,6 +7,7 @@ export type portType ={
     "tag": string[],
     "description": string,
     "year": string,
-    "link":string
+    "link":string,
+    "responsible":boolean
 
 }

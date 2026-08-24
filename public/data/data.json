@@ -8,7 +8,8 @@
       "tag": ["Web","반응형"],
       "description": "제주 야크 ",
       "year": "2026",
-      "link":"https://www.yakmaeul.com/"
+      "link":"https://www.yakmaeul.com/",
+      "responsible":true
     },
     {
       "id": 2,
@@ -19,7 +20,8 @@
       "tag": ["Web","반응형"],
       "description": "",
       "year": "2026",
-      "link":"https://ctpcar.or.kr/"
+      "link":"https://ctpcar.or.kr/",
+      "responsible":false
       
     },
     {
@@ -31,7 +33,8 @@
       "tag": ["Web","ERP","React"],
       "description": "프리핀스 렌탈 서비스의 영업, 구매, 재고, 정산 업무를 통합 관리하는 ERP 시스템입니다.<br>부서별로 분산되어 있던 데이터를 하나의 화면에서 연결해 업무 흐름을 표준화하고 실시간 현황 조회와 이력 추적으로 운영 효율 및 의사결정 속도를 높일 수 있도록 구축했습니다.",
       "year": "2026",
-      "link":""
+      "link":"",
+      "responsible":false
     },
     {
       "id": 4,
@@ -42,7 +45,8 @@
       "tag": ["Web","ERP","React"],
       "description": "이지네트웍스의 영업, 구매, 재고, 정산 업무를 통합 관리하는 ERP 시스템입니다.<br>부서별로 분산되어 있던 데이터를 하나의 화면에서 연결해 업무 흐름을 표준화하고 실시간 현황 조회와 이력 추적으로 운영 효율 및 의사결정 속도를 높일 수 있도록 구축했습니다.",
       "year": "2026",
-      "link":""
+      "link":"",
+      "responsible":false
     },
     {
       "id": 5,
@@ -53,7 +57,8 @@
       "tag": ["Hybrid App"],
       "description": "",
       "year": "2026",
-      "link":"https://dolgo.org/"
+      "link":"https://dolgo.org/",
+      "responsible":true
     },
     {
       "id": 6,
@@ -64,7 +69,8 @@
       "tag": ["Web","반응형","React"],
       "description": "IOS 앱, Android 앱 지원, 홈페이지(반응형) 구현, 3가지 플랫폼을 구현하였습니다.<br/>지도 검색, 각종 api 활용 및 구현하여 다양한 기능을 탑재하였습니다.",
       "year": "2026",
-      "link":""
+      "link":"",
+      "responsible":true
     },
     {
       "id": 7,
@@ -75,7 +81,8 @@
       "tag": ["Web","반응형"],
       "description": "",
       "year": "2026",
-      "link":""
+      "link":"",
+      "responsible":true
     },
     {
       "id": 8,
@@ -86,7 +93,8 @@
       "tag": ["Web","반응형"],
       "description": "",
       "year": "2026",
-      "link":"https://www.nasaret.co.kr/"
+      "link":"https://www.nasaret.co.kr/",
+      "responsible":true
     },
     {
       "id": 9,
@@ -97,7 +105,8 @@
       "tag": ["Web","반응형"],
       "description": "",
       "year": "2026",
-      "link":""
+      "link":"",
+      "responsible":true
     },
     {
       "id": 10,
@@ -108,7 +117,8 @@
       "tag": ["Web","반응형"],
       "description": "베이비 드로우는 인플루언서들에게 각각의 URL을 제공하고 총판 형태로 정산을 하는 신개념 쇼핑 플랫폼입니다.<br/>정산, 샵인샵, 기타 기능까지 완벽하게 구현되어 있습니다.",
       "year": "2026",
-      "link":""
+      "link":"",
+      "responsible":true
     }
 
 
