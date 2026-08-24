@@ -26,22 +26,32 @@ export const PortfolioView = () => {
         <React.Fragment>
             {data&&(
                 <React.Fragment>
-                    <div className="">
-                        <section className="sub_con port_view">
-                            <div className="port_view_banner" 
-                                style={{
-                                    background:`url('${import.meta.env.BASE_URL}image/portfolio/banner_${element.nickname}.jpg')center no-repeat`,
-                                    backgroundSize:`cover`
-                            }}>
-                                <div className="port_view_banner_cnt">
-                                    <h5>{element.tag}</h5>
-                                    <h3>{element.title}</h3>
-                                    <p>{element.description}</p>
-                                </div>
+                    
+                    <section className="sub_con port_view">
+                        <div className="port_view_banner" 
+                            style={{
+                                background:`url('${import.meta.env.BASE_URL}image/portfolio/banner_${element.nickname}.jpg')center no-repeat`,
+                                backgroundSize:`cover`
+                        }}>
+                            <div className="port_view_banner_cnt">
+                                <h5>{element.tag}</h5>
+                                <h3>{element.title}</h3>
+                                <p dangerouslySetInnerHTML={{__html: element.description}}></p>
+                                {element.link&&(
+                                <a href={element.link} className="port_link" target="_blank">
+                                    <span>
+                                        <img src={`${import.meta.env.BASE_URL}image/port_link.png`} />  
+                                        <i>
+                                            <img src={`${import.meta.env.BASE_URL}image/port_link_arrow.png`} />  
+                                        </i>
+                                    </span>사이트 새창보기
+                                </a>
+                                )}
                             </div>
-                            <img src={`${import.meta.env.BASE_URL}${element.thumbnail}`} alt="포폴 화면" className="port_main_view"/>
-                        </section>     
-                    </div>
+                        </div>
+                        <img src={`${import.meta.env.BASE_URL}${element.thumbnail}`} alt="포폴 화면" className="port_main_view"/>
+                    </section>     
+                    
 
 
                     <div className="port_gap">

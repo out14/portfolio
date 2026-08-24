@@ -129,11 +129,11 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
     font-family: 'pretendard','NotoSansKR', '돋움', Sans-serif;
-
 }
 .gmarket{
     font-family: 'gmarket','NotoSansKR', '돋움', Sans-serif;
 }
+.cnt{ min-height: 100vh; }
 ol, ul, li {
 	list-style: none;
     display: block;

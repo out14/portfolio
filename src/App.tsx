@@ -11,6 +11,7 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -25,9 +26,20 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <BrowserRouter basename="/portfolio">
           <PageTransitionProvider>
-            <Header/>
-            <MainRouter/>
-            <Footer/>
+              <Helmet>
+                <meta name="description" content="디자이너가 말아주는 퍼블리싱" />
+                <meta property="og:title" content="디말퍼" />
+                <meta property="og:image" content="/image/web thumnail.png"></meta>
+                <link rel="icon" type="image/svg+xml" href="/image/icon.png" />
+                <meta property="og:description" content="디자이너가 말아주는 퍼블리싱"/>
+                <title>디말퍼</title>
+              </Helmet>
+              <Header/>
+              <div className="cnt">
+                <MainRouter/>
+              </div>
+              <Footer/>
+            
           </PageTransitionProvider>
         </BrowserRouter>
       </QueryClientProvider>

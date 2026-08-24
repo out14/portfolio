@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import type { portType } from '@/package/type';
 import { TransitionNavLink } from './transNavLink';
 
@@ -6,9 +5,10 @@ export const Card = ({element}:{element:portType}) => {
     return (
         <TransitionNavLink 
             to={
-                element.link===""
-                ?`/portfolioView/${element.nickname}`
-                :element.link
+                // element.link===""
+                // ?`/portfolioView/${element.nickname}`
+                // :element.link
+                 `/portfolioView/${element.nickname}`
             }
             
         >
