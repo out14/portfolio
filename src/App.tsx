@@ -23,7 +23,7 @@ function App() {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-        <BrowserRouter>
+        <BrowserRouter basename="/portfolio">
           <Header/>
           <MainRouter/>
           <Footer/>
