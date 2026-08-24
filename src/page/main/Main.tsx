@@ -10,13 +10,11 @@ export const Main = () => {
 
     const {  
         data,
-        filter,
-        setFilter,
-        isLoading,
-        error 
+        // filter,
+        // setFilter,
+        // isLoading,
+        // error 
     } = useListData()
-
-    console.log(data)
 
     return (
         <div>

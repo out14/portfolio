@@ -3,7 +3,7 @@ import { Card } from '@/package/component';
 import {useListData} from '@/package/hook/List';
 import type { portType } from '@/package/type';
 import cn from 'classnames';
-import { Link } from "react-router-dom"
+
 
 export const Portfolio = () => {
 
@@ -12,8 +12,8 @@ export const Portfolio = () => {
         data,
         filter,
         setFilter,
-        isLoading,
-        error
+        // isLoading,
+        // error
     } = useListData()
     
 
