@@ -8,7 +8,7 @@ export function useListData() {
     const { data, isLoading, error } = useQuery({
       queryKey: ['portfolioList',filter],
       queryFn: async () => {
-            const res = await fetch('/data/data.json')
+            const res = await fetch(`${import.meta.env.BASE_URL}/data/data.json`)
             const data = await res.json()
 
             if (filter === 'all') {

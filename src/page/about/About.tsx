@@ -20,7 +20,7 @@ export const About = () => {
                     디자인과 코드, 그 사이에서 균형을 찾습니다.
                 </h4>
                 </div>
-                <img className="about_main_img" src="/public/image/about_main.png" alt="about"/>
+                <img className="about_main_img" src={`${import.meta.env.BASE_URL}image/about_main.png"`} alt="about"/>
             </div>
 
             {/* <!-- about sec01 --> */}
@@ -38,7 +38,7 @@ export const About = () => {
                     <dl>
                         <dt>
                         <div className="about_sec01_graphic_img">
-                            <img src="/public/image/main_icon01.png" alt="DESIGN"/>
+                            <img src={`${import.meta.env.BASE_URL}image/main_icon01.png"`} alt="DESIGN"/>
                         </div>
                         <h3>DESIGN</h3>
                         </dt>
@@ -53,7 +53,7 @@ export const About = () => {
                     <dl>
                         <dt>
                         <div className="about_sec01_graphic_img">
-                            <img src="/public/image/main_icon03.png" alt="PUBLISHING"/>
+                            <img src={`${import.meta.env.BASE_URL}image/main_icon03.png"`} alt="PUBLISHING"/>
                         </div>
                         <h3>PUBLISHING</h3>
                         </dt>
@@ -68,7 +68,7 @@ export const About = () => {
                     <dl>
                         <dt>
                         <div className="about_sec01_graphic_img">
-                            <img src="/public/image/ic_react.png" alt="FRONT-END"/>
+                            <img src={`${import.meta.env.BASE_URL}image/ic_react.png"`} alt="FRONT-END"/>
                         </div>
                         <h3>FRONT-END</h3>
                         </dt>
@@ -83,7 +83,7 @@ export const About = () => {
                     <dl>
                         <dt>
                         <div className="about_sec01_graphic_img">
-                            <img src="/public/image/ic_goal.png" alt="NOW"/>
+                            <img src={`${import.meta.env.BASE_URL}image/ic_goal.png"`} alt="NOW"/>
                         </div>
                         <h3>NOW</h3>
                         </dt>
@@ -96,7 +96,7 @@ export const About = () => {
                     </li>
                 </ul>
                 </div>
-                <img src="/public/image/about_bg01.png" alt="" className="about_sec_bg about_sec_bg01"/>
+                <img src={`${import.meta.env.BASE_URL}image/about_bg01.png"`} alt="" className="about_sec_bg about_sec_bg01"/>
             </div>
 
             {/* <!-- about sec02 --> */}
@@ -112,7 +112,7 @@ export const About = () => {
                 <ul className="about_sec_graphic about_sec02_graphic">
                     <li>
                     <div className="about_sec01_graphic_img">
-                        <img src="/public/image/main_icon01.png" alt="DESIGN"/>
+                        <img src={`${import.meta.env.BASE_URL}image/main_icon01.png"`} alt="DESIGN"/>
                     </div>
                     <h3>UX/UI 디자인 이해</h3>
                     <p>
@@ -122,7 +122,7 @@ export const About = () => {
                     </li>
                     <li>
                     <div className="about_sec01_graphic_img">
-                        <img src="/public/image/main_icon02.png" alt="DESIGN"/>
+                        <img src={`${import.meta.env.BASE_URL}image/main_icon02.png"`} alt="DESIGN"/>
                     </div>
                     <h3>반응형 구현</h3>
                     <p>
@@ -132,7 +132,7 @@ export const About = () => {
                     </li>
                     <li>
                     <div className="about_sec01_graphic_img">
-                        <img src="/public/image/main_icon03.png" alt="DESIGN"/>
+                        <img src={`${import.meta.env.BASE_URL}image/main_icon03.png"`} alt="DESIGN"/>
                     </div>
                     <h3>클린한 코드</h3>
                     <p>
@@ -143,14 +143,14 @@ export const About = () => {
                     
                 </ul>
                 </div>
-                <img src="/public/image/about_bg02.png" alt="" className="about_sec_bg about_sec_bg02"/>
+                <img src={`${import.meta.env.BASE_URL}image/about_bg02.png"`} alt="" className="about_sec_bg about_sec_bg02"/>
             </div>
 
             {/* <!-- about sec03 --> */}
             <div className="about_sec about_sec03">
                 <div className="about_sec_inner">
                 <div className="about_main_txt">
-                    <h5>SKILLS</h5>
+                    <h5>SKILLS</h5>
                     <h3 className="gmarket">
                     주요 기술 스택
                     </h3>
@@ -191,7 +191,7 @@ export const About = () => {
                     </li>
                 </ul>
                 </div>
-                <img src="/public/image/about_bg03.png" alt="" className="about_sec_bg about_sec_bg03"/>
+                <img src={`${import.meta.env.BASE_URL}image/about_bg03.png"`} alt="" className="about_sec_bg about_sec_bg03"/>
             </div>
 
             </div>

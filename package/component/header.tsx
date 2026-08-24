@@ -7,7 +7,7 @@ export const Header =()=>{
             <div className="header">
                 <div className="header_cnt">
                     <a href="/" className="header_logo">
-                        <img src="/public/image/logo.png" alt="로고"/>
+                        <img src={`${import.meta.env.BASE_URL}image/logo.png`} alt="로고"/>
                         
                     </a>
                     <ul className="header_ul">
