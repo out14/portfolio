@@ -1,0 +1,198 @@
+@charset "UTF-8";
+/* 나눔 붓글씨 */
+@import url('//fonts.googleapis.com/earlyaccess/nanumbrushscript.css');
+.nanum{
+    font-family: 'Nanum Brush Script', cursive; 
+}
+
+/*프리텐다드*/
+@font-face{
+    font-family:'pretendard';
+    src:url('@package/asset/font/Pretendard-Black.otf');
+    src:url('@package/asset/font/Pretendard-Black.woff') format('woff');
+    font-weight:900;
+    font-style:normal;
+}
+@font-face{
+    font-family:'pretendard';
+    src:url('@package/asset/font/Pretendard-ExtraBold.otf');
+    src:url('@package/asset/font/Pretendard-ExtraBold.woff') format('woff');
+    font-weight:800;
+    font-style:normal;
+}
+@font-face{
+    font-family:'pretendard';
+    src:url('@package/asset/font/Pretendard-Bold.otf');
+    src:url('@package/asset/font/Pretendard-Bold.woff') format('woff');
+    font-weight:700;
+    font-style:normal;
+}
+@font-face{
+    font-family:'pretendard';
+    src:url('@package/asset/font/Pretendard-SemiBold.otf');
+    src:url('@package/asset/font/Pretendard-SemiBold.woff') format('woff');
+    font-weight:600;
+    font-style:normal;
+}
+@font-face{
+    font-family:'pretendard';
+    src:url('@package/asset/font/Pretendard-Medium.otf');
+    src:url('@package/asset/font/Pretendard-Medium.woff') format('woff');
+    font-weight:500;
+    font-style:normal;
+}
+@font-face{
+    font-family:'pretendard';
+    src:url('@package/asset/font/Pretendard-Regular.otf');
+    src:url('@package/asset/font/Pretendard-Regular.woff') format('woff');
+    font-weight:400;
+    font-style:normal;
+}
+@font-face{
+    font-family:'pretendard';
+    src:url('@package/asset/font/Pretendard-Light.otf');
+    src:url('@package/asset/font/Pretendard-Light.woff') format('woff');
+    font-weight:300;
+    font-style:normal;
+}
+@font-face{
+    font-family:'pretendard';
+    src:url('@package/asset/font/Pretendard-ExtraLight.otf');
+    src:url('@package/asset/font/Pretendard-ExtraBold.woff') format('woff');
+    font-weight:200;
+    font-style:normal;
+}
+@font-face{
+    font-family:'pretendard';
+    src:url('@package/asset/font/Pretendard-Thin.otf');
+    src:url('@package/asset/font/Pretendard-Thin.woff') format('woff');
+    font-weight:100;
+    font-style:normal;
+}
+
+/*지마켓 산스*/
+@font-face{
+    font-family:'gmarket';
+    src:url('@package/asset/font/GmarketSansBold.otf');
+    src:url('@package/asset/font/GmarketSansBold.woff') format('woff');
+    font-weight:700;
+    font-style:normal;
+}
+@font-face{
+    font-family:'gmarket';
+    src:url('@package/asset/font/GmarketSansMedium.otf');
+    src:url('@package/asset/font/GmarketSansMedium.woff') format('woff');
+    font-weight:500;
+    font-style:normal;
+}
+@font-face{
+    font-family:'gmarket';
+    src:url('@package/asset/font/GmarketSansLight.otf');
+    src:url('@package/asset/font/GmarketSansLight.woff') format('woff');
+    font-weight:300;
+    font-style:normal;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, div, 
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, hr {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+    outline: none;
+}
+
+h1::selection, h2::selection, h3::selection, dt::selection, dd::selection, div::selection,
+h4::selection, h5::selection, p::selection, label::selection, img::selection, 
+th::selection, td::selection, table::selection, tr::selection, b::selection,
+a::selection, li::selection, span::selection, strong::selection 
+{ background:var(--main-color); color:#fff; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: 'pretendard','NotoSansKR', '돋움', Sans-serif;
+
+}
+.gmarket{
+    font-family: 'gmarket','NotoSansKR', '돋움', Sans-serif;
+}
+ol, ul, li {
+	list-style: none;
+    display: block;
+    width: initial;
+}
+li{
+    width: initial;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+a:hover,a:active,a:focus, a{text-decoration:none;}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+button{
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border:none;
+    background: none;;
+}
+.upper {text-transform:uppercase;}
+.active {z-index:1;}
+.txt_center {text-align:center;}
+.txt_left {text-align:left;}
+.txt_right {text-align:right;}
+
+input { 
+    -webkit-appearance:none;
+    -ms-appearance:none;
+    appearance:none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+select { 
+    -webkit-appearance:none;
+    -ms-appearance:none;
+    appearance:none;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+select::-ms-expand {display:none}
+
+::-webkit-scrollbar{width: 10px;}
+::-webkit-scrollbar-track {background-color:#f1f1f1;}
+::-webkit-scrollbar-thumb {background-color:#dddddd;border-radius: 4px;}
+::-webkit-scrollbar-thumb:hover {background: var(--main-color);}
+::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment {
+width:10px;height:10px;background:#cecece;} 
+
+

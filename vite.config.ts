@@ -16,8 +16,7 @@ export default defineConfig({
         alias: [
             { find: '@', replacement: path.resolve('.') },
             { find: '@package', replacement: path.resolve('./package') },
-            { find: '@src', replacement: path.resolve('./src') },
-           
+            { find: '@src', replacement: path.resolve('./src') }
         ]
     },
     build: {
