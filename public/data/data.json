@@ -74,15 +74,15 @@
     },
     {
       "id": 7,
-      "title": "현대카드노동조합",
-      "nickname":"hyundai",
+      "title": "삼성전자노동조합",
+      "nickname":"samsung",
       "category": ["publishing"],
-      "thumbnail": "image/portfolio/main_hyundai.jpg",
+      "thumbnail": "image/portfolio/main_samsung.jpg",
       "tag": ["Web","반응형"],
-      "description": "",
+      "description": "지난 1969년 설립된 이후 반세기 동안 노조가 없는, 즉 무노조 경영을 해왔던 삼성전자에 노동조합이 2019년 출범했습니다.<br/>당시 가입 의사를 밝힌 노동자들은 200명 정도였고 로그인, 회원별 등급 시스템까지 구축했었습니다,",
       "year": "2026",
       "link":"",
-      "responsible":true
+      "responsible":false
     },
     {
       "id": 8,
