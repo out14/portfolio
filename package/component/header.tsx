@@ -6,10 +6,9 @@ export const Header =()=>{
         <div>
             <div className="header">
                 <div className="header_cnt">
-                    <a href="/" className="header_logo">
+                    <NavLink to="/"  className="header_logo">
                         <img src={`${import.meta.env.BASE_URL}image/logo.png`} alt="로고"/>
-                        
-                    </a>
+                    </NavLink>
                     <ul className="header_ul">
                         <li id="index">
                             <NavLink to="/" className={({ isActive }) => isActive ? "on" : ""}>Main</NavLink>
