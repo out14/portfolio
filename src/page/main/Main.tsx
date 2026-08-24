@@ -1,10 +1,13 @@
 //import React from 'react';
 import {useListData } from '@/package/hook'
 import { Swiper, SwiperSlide} from "swiper/react";
+import { Navigation } from 'swiper/modules'
 import "swiper/css";
 import "swiper/css/pagination";
+import 'swiper/css/navigation'
 import { Card } from '@/package/component';
 import { Link } from 'react-router-dom';
+import { useRef } from 'react';
 
 
 export const Main = () => {
@@ -16,6 +19,8 @@ export const Main = () => {
         // isLoading,
         // error 
     } = useListData()
+    const prevRef = useRef<HTMLButtonElement>(null)
+    const nextRef = useRef<HTMLButtonElement>(null)
 
     return (
         <div>
@@ -109,7 +114,16 @@ export const Main = () => {
                         <Swiper
                             spaceBetween={20}
                             slidesPerView={1}
-                            
+                            modules={[Navigation]}
+                            onBeforeInit={(swiper) => {
+                                if (
+                                    typeof swiper.params.navigation !== 'boolean' &&
+                                    swiper.params.navigation
+                                ) {
+                                    swiper.params.navigation.prevEl = prevRef.current
+                                    swiper.params.navigation.nextEl = nextRef.current
+                                }
+                            }}
                             breakpoints= {{
                                     480: {
                                         slidesPerView: 2,
@@ -125,11 +139,18 @@ export const Main = () => {
                             {
                                 data?.map((e:any)=>(
                                     <SwiperSlide>
-                                    <Card element={e}/> 
+                                        <Card element={e}/> 
                                     </SwiperSlide>
                                 ))
                             }
-                            
+                            <button className='portfolio_prev' ref={prevRef}>
+                                <span></span>
+                                <span></span>
+                            </button>
+                            <button className='portfolio_next'  ref={nextRef}>
+                                <span></span>
+                                <span></span>
+                            </button>
                         </Swiper>
                         
                     <div className="main_portfolio_moblie">

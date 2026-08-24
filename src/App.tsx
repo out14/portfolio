@@ -12,6 +12,7 @@ import {
   QueryClientProvider,
 } from '@tanstack/react-query'
 import { Helmet } from 'react-helmet-async';
+import { ScrollTop } from '@/package/hook';
 
 
 
@@ -34,6 +35,7 @@ function App() {
                 <meta property="og:description" content="디자이너가 말아주는 퍼블리싱"/>
                 <title>디말퍼</title>
               </Helmet>
+              <ScrollTop/>
               <Header/>
               <div className="cnt">
                 <MainRouter/>
