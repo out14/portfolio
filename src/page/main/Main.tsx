@@ -22,17 +22,17 @@ export const Main = () => {
             <div className="main">
                 <div className="main_cnt">
                     <div className="main_img">
-                    <img className="main_img01" src={`${import.meta.env.BASE_URL}image/main_img02.png"`} alt="메인 이미지02"/>
+                    <img className="main_img01" src={`${import.meta.env.BASE_URL}image/main_img02.png`} alt="메인 이미지02"/>
                     <div className="main_txt_title gmarket">
                         <h1>디자이너가</h1>
                         <p className="nanum">말아주는</p>
                         <h1>퍼블리싱</h1>
                     </div>
-                    <img className="main_img02" src={`${import.meta.env.BASE_URL}image/main_img01.png"`} alt="메인 이미지01"/>
-                    <img src={`${import.meta.env.BASE_URL}image/main_postit.png"`} className="main_postit" alt="포스트잇"/>
+                    <img className="main_img02" src={`${import.meta.env.BASE_URL}image/main_img01.png`} alt="메인 이미지01"/>
+                    <img src={`${import.meta.env.BASE_URL}image/main_postit.png`} className="main_postit" alt="포스트잇"/>
                     </div>
                 </div>
-            <img className="main_bg" src={`${import.meta.env.BASE_URL}image/bg.jpg"`} alt="배경 이미지"/>
+            <img className="main_bg" src={`${import.meta.env.BASE_URL}image/bg.jpg`} alt="배경 이미지"/>
             </div>
 
             <div className="main_body">
@@ -42,7 +42,7 @@ export const Main = () => {
                             <li>
                             <dl className="main_feature_list_item">
                                 <dt>
-                                <img src={`${import.meta.env.BASE_URL}image/main_icon01.png"`} alt="디자인"/>
+                                <img src={`${import.meta.env.BASE_URL}image/main_icon01.png`} alt="디자인"/>
                                 </dt>
                                 <dd>
                                 <h3>디자인을 이해하는 퍼블리싱</h3>
@@ -56,7 +56,7 @@ export const Main = () => {
                             <li>
                             <dl className="main_feature_list_item">
                                 <dt>
-                                <img src={`${import.meta.env.BASE_URL}image/main_icon02.png"`} alt="반응형"/>
+                                <img src={`${import.meta.env.BASE_URL}image/main_icon02.png`} alt="반응형"/>
                                 </dt>
                                 <dd>
                                 <h3>완벽한 반응형 구현</h3>
@@ -69,7 +69,7 @@ export const Main = () => {
                             <li>
                             <dl className="main_feature_list_item">
                                 <dt>
-                                <img src={`${import.meta.env.BASE_URL}image/main_icon03.png"`} alt="유지보수"/>
+                                <img src={`${import.meta.env.BASE_URL}image/main_icon03.png`} alt="유지보수"/>
                                 </dt>
                                 <dd>
                                 <h3>깔끔하고 유지보수 쉬운 코드</h3>
@@ -82,7 +82,7 @@ export const Main = () => {
                             <li>
                             <dl className="main_feature_list_item">
                                 <dt>
-                                <img src={`${import.meta.env.BASE_URL}image/main_icon04.png"`} alt="개발경험"/>
+                                <img src={`${import.meta.env.BASE_URL}image/main_icon04.png`} alt="개발경험"/>
                                 </dt>
                                 <dd>
                                 <h3>개발 경험으로 완성도 UP</h3>
@@ -133,10 +133,9 @@ export const Main = () => {
                         </Swiper>
                         
                     <div className="main_portfolio_moblie">
-                        <a href="/page/portfolio.html" className="">
+                        <Link to="/portfolio" className="">
                         전체보기
-                        
-                        </a>
+                        </Link>
                     </div>
                     </div>
                 </div>
@@ -152,7 +151,7 @@ export const Main = () => {
                     <p>당신의 아이디어를 웹에서 완벽하게 말아드립니다.</p>
                     </div>
                     <div className="main_about_img">
-                    <img src={`${import.meta.env.BASE_URL}image/main_banner.png"`} alt="배너"/>
+                    <img src={`${import.meta.env.BASE_URL}image/main_banner.png`} alt="배너"/>
                     </div>  
                 </div>
             </div>

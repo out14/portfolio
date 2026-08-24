@@ -12,7 +12,11 @@ export const Card = ({element}:{element:portType}) => {
             target="_blank"
         >
             <div className="portfolio_image">
-                <img src={element.thumbnail} alt={element.title}/>
+                {/* <img src={element.thumbnail} alt={element.title}/> */}
+                <img
+                    src={`${import.meta.env.BASE_URL}${element.thumbnail}`}
+                    alt={element.title}
+                />
             </div>
 
             <div className="portfolio_info">
